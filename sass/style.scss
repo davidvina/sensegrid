@@ -1,0 +1,449 @@
+/****************************************************************
+
+ INDEX
+* 0. Tipografia externa
+* 1. Base
+* 2. Layout
+    2.1 Contenedores genéricos
+    2.2 Cabecera - #main-header
+    2.3 Navegación principal - #main-navigation
+    2.4 Contenido principal - #main-content
+    2.5 Pie - #main-footer
+* 3. Estilos de terceros
+* 4. Estilos elementos comunes web
+    4.1 Generales
+    4.1 Cabecera
+    4.2 Menu navegación principal
+    4.4 Contenido
+    4.4 Pie
+* 5. Estilos por pagina
+    5.1. Pagina inicio - index.html
+    5.2. Com comprar - comcomprar.html
+    5.3. Llista de productes o página categoria - categoria.html
+    5.4. Pagina producte - producte.html
+
+
+*****************************************************************/
+
+
+@charset "UTF-8"; //necessario para poder utilitzar acentos
+
+
+@import 'variables';  // importar siempre variables primero
+
+@import 'grid/grid';       // regilla
+@import 'mixins/mixins';     // patrones reutilizables por las reglas
+
+
+
+/****************************************************************
+*
+* 1. Base
+*     estilo etiquetas generales por defecto
+*
+*****************************************************************/
+
+@import 'base/base'; // estilos básicos
+
+/****************************************************************
+*
+* 2. Layout
+*    Maquetación bloques
+*    sólo se definen posicionamiento, espaciado y color de fondo
+*
+*****************************************************************/
+
+@import 'layout';  // estructura
+
+
+/****************************************************************
+*
+* 3. Estilos de terceros
+*
+*    estilos externos importados
+*
+*****************************************************************/
+
+/*
+Iconos Fontello
+http://fontello.com/
+*/
+@import 'vendor/fontello';
+
+
+
+/****************************************************************
+*
+* 4. Estilos elementos comunes web
+*
+*
+*****************************************************************/
+
+
+/*
+***************************************************************
+  4.1 Generales
+***************************************************************
+*/
+.content-container p{
+  text-align: justify;
+}
+
+/* nessari per a que s'oculti o es mostri els menus collapsables */
+
+.hide{
+  display: none !important;
+}
+
+.toggleMenu{
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid lighten($navbar-bg, 80%);
+
+  @media only screen and (min-width: $screen-m) {
+      display: none;
+  }
+}
+
+
+
+/*
+***************************************************************
+  4.1 Cabecera
+***************************************************************
+*/
+
+/* menús cabecera */
+#follow-menu{
+  @include nav-hor(right);
+
+    color: darken($header-bg-color, 30%);
+
+  .list-heading{
+    padding: 0px 8px;
+    font-style: italic;
+  }
+
+  a{
+    color: $navbar-bg;
+    font-size: 1.4rem;
+
+    &:hover{
+      color: $bg-color;
+    }
+  }
+
+}
+
+#featured-menu{
+  @include nav-hor(left);
+  a{
+    color: $navbar-bg;
+    padding: 4px 10px;
+    @include border-radius();
+
+    &:hover{
+      background-color: darken($header-bg-color, 5%);
+      color: $navbar-bg;
+    }
+
+    &.active{
+      cursor:default;
+      background-color: lighten($header-bg-color, 10%);
+    }
+  }
+
+}
+
+
+/* formulari cerca capçalera */
+
+#search-form{
+  input[type="text"]{
+    background-color: lighten($header-bg-color,50%);
+    border: 1px solid lighten($header-bg-color,40%);
+  }
+}
+
+
+/*
+***************************************************************
+  4.2 Menu navegación principal
+***************************************************************
+*/
+/* menus navegacion principal */
+#main-navbar{
+  @include nav-bar();
+}
+
+#breadcrumb{
+  background-color: $navbar-bg;
+  color: darken($navbar-bg, 30%);
+
+  em.currentPage, a{
+    margin: 0px 10px;
+    color: $header-font-color;
+  }
+
+  a{
+
+    color: $header-font-color;
+    text-decoration: underline;
+    margin: 0px 10px;
+
+    &:hover{
+      color: $navbar-link-color;
+    }
+  }
+
+  p{
+      margin: 0px;
+      padding: $gap-ver $gap-hor;
+      text-align: center;
+  }
+}
+
+
+
+/*
+***************************************************************
+  4.3 Contenido
+***************************************************************
+*/
+
+#page-header{
+  background-size: 100%;
+  padding: 60px 0px !important;
+  margin-bottom: 30px;
+
+  .main-title{
+    text-align: center;
+    @include col();
+    color: #fff;
+    @include text-shadow(2px 2px 3px rgba(0, 0, 0, 0.80));
+  }
+
+}
+
+/*
+***************************************************************
+  4.4 Pie
+***************************************************************
+*/
+
+
+/* menus pie */
+#help-menu, #about-us-menu{
+  @include nav-ver(center);
+
+  h3{
+    font-size: 1rem;
+    font-weight: normal;
+    color: darken($footer-bg-color, 100%);
+    border-bottom: 1px solid darken($footer-bg-color, 100%);
+
+  }
+
+  a{
+    color:$footer-font-color;
+
+    &:hover{
+      color: darken($footer-bg-color, 100%);
+    }
+  }
+}
+
+/* copyright */
+#copyright{
+  font-size: 90%;
+  text-align: center;
+}
+
+/****************************************************************
+*
+* 5. Estilos por pagina
+*
+*
+*****************************************************************/
+
+/*
+***************************************************************
+  5.1. Pagina inicio - index.html
+***************************************************************
+*/
+
+body#home #page-header{
+  background-image: url("../img/xmas.jpg");
+}
+
+
+.featured-category{
+  text-align: center;
+}
+
+.category-image{
+  @include img-responsive();
+  margin-bottom: 15px;
+}
+
+.category-link{
+  margin: auto;
+  @include button();
+}
+
+
+/*
+***************************************************************
+  5.2. Com comprar - comcomprar.html
+***************************************************************
+*/
+
+body#comcomprar #page-header{
+  background-image: url("../img/flower.jpg");
+}
+
+
+
+/*
+***************************************************************
+  5.3. Llista de productes o página categoria - categoria.html
+***************************************************************
+*/
+
+body#categoria1 #page-header{
+  background-image: url("../img/green_background.jpg");
+}
+
+#product-navbar{
+  @include nav-ver();
+  @include nav-bar-ver(center);
+}
+
+
+.product-thumb{
+  text-align: center;
+
+  .product-title{
+    margin: 0px;
+  }
+
+  img{
+      @include img-responsive();
+  }
+
+  span.price{
+    display: block;
+    margin: -5px 0px 10px;
+
+    abbr{
+      text-decoration: none;
+    }
+
+    .number-price{
+      font-size: 1.6rem;
+    }
+  }
+
+  a.button{
+    @include button(3px 8px, 0.8rem);
+  }
+}
+
+
+#advance-search{
+
+  label{
+    display: block;
+    clear: both;
+  }
+  input[type="range"]{
+    margin: 0px;
+    float: left;
+    width: 70%;
+    margin-top: 3px;
+  }
+  input[type="text"]{
+    margin-left: 5%;
+    width: 25%;
+    padding: 5px 2px 5px 5px;
+    height: 25px;
+  }
+  input[type="submit"]{
+    width: 100%;
+    margin: 10px 0px 5px;
+  }
+
+  .send-group{
+    text-align: center;
+  }
+
+}
+
+/*
+***************************************************************
+  5.4. Pagina producte - producte.html
+***************************************************************
+*/
+
+.category-title,
+.product-title{
+  background-color: lighten($font-color-default, 45%);
+  //color: $bg-color;
+  padding-top: 5px;
+  margin: 0px;
+}
+
+#product-image{
+  img{
+    @include img-responsive();
+  }
+}
+
+form#add2cart{
+  select, input[type="submit"]{
+    width: 100%;
+  }
+
+  fieldset{
+    border-top: none;
+    margin-bottom: 0px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    text-align: center;
+
+    select option{
+      text-align: center;
+    }
+  }
+}
+
+.price, .product-state, .product-conditions{
+    padding: 5px;
+}
+
+.price{
+
+  background-color: darken($bg-color, 5%);
+
+  margin-bottom: 0px;
+  text-align: center !important;
+
+  .number-price{
+    font-size: 2rem;
+  }
+}
+
+.product-state{
+  background-color: lighten($copyright-bg-color, 15%);
+  color: $bg-color;
+  text-align: center !important;
+}
+
+.product-conditions{
+  background-color: lighten($copyright-bg-color, 15%);
+  color: $bg-color;
+  font-size: 0.7rem;
+  font-style: italic;
+  text-align: left !important;
+}

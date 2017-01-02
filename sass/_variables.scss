@@ -1,0 +1,136 @@
+@charset "UTF-8";
+
+/****************************************************************
+*
+* 0. Tipografia externa
+*
+*****************************************************************/
+
+@import url('https://fonts.googleapis.com/css?family=Bitter');
+
+///////////////////////////////////////////////////////////////////////////////////////
+// fonts
+// sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+// serif:
+// monospace:
+///////////////////////////////////////////////////////////////////////////////////////
+
+
+$font-default: 'Bitter', Helvetica, Arial, serif;
+$font-headers: $font-default;
+
+$font-size-default: 14px;
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+// Media queries breakpoints
+// Basados en Bootstrap
+///////////////////////////////////////////////////////////////////////////////////////
+
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+$screen-xs:  400px;       //movil en bootstrap 480px !default;
+$screen-s:   550px;       //phablet
+$screen-m:   768px;       // tablet
+$screen-l:   992px;      // desktop
+$screen-xl:  1200px;      // destop-HD
+
+// navbar-breackpoint
+$navbar-breackpoint:   768px;
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+// Configuración Grid
+///////////////////////////////////////////////////////////////////////////////////////
+
+// ancho máximo contenedor
+$container-width: 960px;
+
+// columnas por defecto
+$grid-default: 12;
+
+// separacion "gap" entre columnas
+$gap-hor: 15px;
+$gap-ver: 10px;
+
+// helpers grid
+$show-grid: false;
+$color-grid: cyan;
+
+// espacio entre bloques
+$text-block-margin: 0px 0px 10px 0px;
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+// Colores
+///////////////////////////////////////////////////////////////////////////////////////
+
+// colors based on
+// http://huertatipografica.com/es/fonts/alegreya-sans-ht
+
+// color fonts
+$font-color-default: darken(#5C4A52, 10%);
+$font-color-headers: darken(#FF6B5A, 50%);
+
+// colors backgrounds
+$bg-color: #F5F4F4;
+
+$header-bg-color: #333333;
+$header-font-color: $font-color-default;
+
+$footer-bg-color: #FF6B5A;
+$footer-font-color: $bg-color;
+
+$copyright-bg-color: #5C4A52;
+$copyright-font-color: $bg-color;
+
+// links
+$link-color: #FF6B5A;
+$link-color-hover: desaturate(#160073, 10%);
+$link-decoration: none;
+$link-decoration-hover: none;
+
+// navbar
+$navbar-bg: #FF6B5A;
+$navbar-link-color: $bg-color;
+$navbar-link-color-bg: #FF6B5A;
+$navbar-link-color-hover: $font-color-headers;
+$navbar-link-color-bg-hover: #68AFC1;
+$navbar-link-active-color: red;
+$navbar-link-active-color-bg: green;
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+// Formularios
+///////////////////////////////////////////////////////////////////////////////////////
+
+// buttons
+$button-padding: 10px 20px;
+$button-color: $font-color-default;
+$button-bg: #68AFC1;
+$button-color-hover: $font-color-headers;
+$button-bg-hover: #FF6B5A;
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+// Formularios
+///////////////////////////////////////////////////////////////////////////////////////
+
+// forms
+$fieldset-border-color: $font-color-default;
+$fieldset-bg-color: darken($bg-color, 10%);
+
+// buttons forms
+$button-form-padding: 5px 10px;
+$button-form-color: $button-color;
+$button-form-bg: $button-bg;
+$button-form-color-hover: $font-color-headers;
+$button-form-bg-hover: $button-bg-hover;
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+// Graficos
+///////////////////////////////////////////////////////////////////////////////////////
+
+$border-radius: 6px; // bordes redondeados
+$text-shadow-default: 0 1px 3px rgba(0, 0, 0, 0.25);
+$shadow-default: 1px, 1px, 3px, red;
