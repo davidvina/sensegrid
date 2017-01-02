@@ -1,3 +1,5 @@
+@charset "UTF-8"; //necessario para poder utilitzar acentos
+
 /****************************************************************
 
  INDEX
@@ -25,8 +27,6 @@
 
 *****************************************************************/
 
-
-@charset "UTF-8"; //necessario para poder utilitzar acentos
 
 
 @import 'variables';  // importar siempre variables primero
@@ -101,7 +101,7 @@ http://fontello.com/
   text-align: center;
   border-bottom: 1px solid lighten($navbar-bg, 80%);
 
-  @media only screen and (min-width: $screen-m) {
+  @media only screen and (min-width: $screen-md) {
       display: none;
   }
 }

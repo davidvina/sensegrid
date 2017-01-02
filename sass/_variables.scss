@@ -19,8 +19,29 @@
 $font-default: 'Bitter', Helvetica, Arial, serif;
 $font-headers: $font-default;
 
-$font-size-default: 14px;
+$font-size-default: 16px;
+$line-height-default: 1.5;
 
+// Native font stack
+$font-family-sans-serif:
+  // Safari for OS X and iOS (San Francisco)
+  -apple-system,
+  // Chrome for OS X (San Francisco)
+  BlinkMacSystemFont,
+  // Windows
+  "Segoe UI",
+  // Android
+  "Roboto",
+  // Basic web fallback
+  "Helvetica Neue", Arial, sans-serif !default;
+
+
+  // espacio entre bloques
+  $text-block-margin: 0 0 1rem 0;
+
+  // blockquote
+  $blocquote-padding: 1rem 2rem;
+  $blocquote-decoration-border: 3px solid #ccc;
 
 ///////////////////////////////////////////////////////////////////////////////////////
 // Media queries breakpoints
@@ -28,10 +49,10 @@ $font-size-default: 14px;
 ///////////////////////////////////////////////////////////////////////////////////////
 
 //## Define the breakpoints at which your layout will change, adapting to different screen sizes.
-$screen-xs:  400px;       //movil en bootstrap 480px !default;
-$screen-s:   550px;       //phablet
-$screen-m:   768px;       // tablet
-$screen-l:   992px;      // desktop
+$screen-xs:  0;       //movil en bootstrap 480px !default;
+$screen-sm:   544px;       //phablet
+$screen-md:   768px;       // tablet
+$screen-lg:   992px;      // desktop
 $screen-xl:  1200px;      // destop-HD
 
 // navbar-breackpoint
@@ -43,7 +64,7 @@ $navbar-breackpoint:   768px;
 ///////////////////////////////////////////////////////////////////////////////////////
 
 // ancho máximo contenedor
-$container-width: 960px;
+$container-width: 1140px;
 
 // columnas por defecto
 $grid-default: 12;
@@ -56,8 +77,7 @@ $gap-ver: 10px;
 $show-grid: false;
 $color-grid: cyan;
 
-// espacio entre bloques
-$text-block-margin: 0px 0px 10px 0px;
+
 
 
 ///////////////////////////////////////////////////////////////////////////////////////

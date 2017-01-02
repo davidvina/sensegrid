@@ -30,12 +30,12 @@
 	padding-top: 20px;
 
 	#main-logo-container{
-		@include col($m:6);
+		@include col($md:6);
 		text-align: center;
 	}
 
 	#follow-menu{
-		@include col($m:6);
+		@include col($md:6);
 		text-align: center;
 		.list-heading{
 			display: block;
@@ -43,19 +43,19 @@
 	}
 
 	#featured-menu{
-		@include col($m:6);
+		@include col($md:6);
 		text-align: center;
 		margin-bottom: 10px;
 		clear: both;
 	}
 
 	#search-form{
-		@include col($m:6);
+		@include col($md:6);
 	  padding-bottom: 30px;
 		text-align: center;
 	}
 
-	@media only screen and (min-width: $screen-m) {
+	@media only screen and (min-width: $screen-md) {
 
 		#main-logo-container{
 			text-align: left;
@@ -100,40 +100,40 @@
 
 	/* layout home */
 	.featured-category{
-		@include col($m:4);
+		@include col($md:4);
 	}
 
 	/* layout pagina com comprar */
 	.howBuy{
-		@include col($m:8);
-		@include offset($m:2);
+		@include col($md:8);
+		@include offset($md:2);
 	}
 
 	/* layout pagina categoria */
 	#product-nav-container{
-		@include col($m:3);
+		@include col($md:3);
 	}
 
 	#products-container{
-		@include col($m:9, $padding:false);
+		@include col($md:9, $padding:false);
 	}
 
 	article.product-thumb{
-		@include col($s:6 ,$m:4);
+		@include col($sm:6 ,$md:4);
 	}
 
 	/* layout pagina producte */
 
 	#product-image{
-		@include col($m:4);
+		@include col($md:4);
 	}
 
 	#product-container{
-		@include col($m:6);
+		@include col($md:6);
 	}
 
 	#price-cart{
-		@include col($m:2);
+		@include col($md:2);
 	}
 
 }
@@ -148,12 +148,12 @@
 	padding-top: 40px;
 
 	#help-menu, #about-us-menu{
-		@include col($m:5);
+		@include col($md:5);
 	  margin-bottom: 15px;
 	}
 
 	#help-menu{
-		@include offset($m:1);
+		@include offset($md:1);
 	}
 
 	#copyright{
@@ -163,4 +163,20 @@
 		margin-top: 40px;
 		padding: 30px 0px;
 	}
+}
+
+
+/*
+***************************************************************
+  2.2 Cabecera
+***************************************************************
+*/
+
+
+.sidebar{
+	 @include col($md:3);
+}
+
+.content{
+	 @include col($md:9);
 }

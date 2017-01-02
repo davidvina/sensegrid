@@ -25,9 +25,9 @@
 // @include col($xl, $l, $m, $, $xs);
 // $grid: permite introducir un numero de columans especifica
 // $xl:  ancho columnas para $screen-xl
-// $l:   ancho para $screen-l
-// $m:   para $screen-m
-// $s:   para $screen-s
+// $l:   ancho para $screen-lg
+// $m:   para $screen-md
+// $s:   para $screen-sm
 // $xs:  para $screen-xs
 //
 // ejemplo uso:
@@ -39,9 +39,9 @@
 @mixin col (
       $grid: $grid-default,
       $xl:  $grid,
-      $l:   $grid,
-      $m:   $grid,
-      $s:   $grid,
+      $lg:   $grid,
+      $md:   $grid,
+      $sm:   $grid,
       $xs:  $grid,
       $padding: true
     ) {
@@ -63,23 +63,23 @@
 
     // només es crea la mediaquery si es diferent de 100% de l'ample
 
-    @if ($s != $grid) {
-      @media only screen and (min-width: $screen-s) {
-          width: percentage($s/$grid);
+    @if ($sm != $grid) {
+      @media only screen and (min-width: $screen-sm) {
+          width: percentage($sm/$grid);
           float: left;
       }
     }
 
-    @if ($m != $grid) {
-      @media only screen and (min-width: $screen-m) {
-          width: percentage($m/$grid);
+    @if ($md != $grid) {
+      @media only screen and (min-width: $screen-md) {
+          width: percentage($md/$grid);
           float: left;
       }
     }
 
-    @if ($l != $grid) {
-      @media only screen and (min-width: $screen-l) {
-          width: percentage($l/$grid);
+    @if ($lg != $grid) {
+      @media only screen and (min-width: $screen-lg) {
+          width: percentage($lg/$grid);
           float: left;
       }
     }
@@ -99,9 +99,9 @@
 @mixin offset (
       $grid: $grid-default,
       $xl:  0,
-      $l:   0,
-      $m:   0,
-      $s:   0,
+      $lg:   0,
+      $md:   0,
+      $sm:   0,
       $xs:  0
       ){
 
@@ -111,21 +111,21 @@
         margin-left: percentage($xs/$grid);
       }
 
-      @if ($s != 0) {
-        @media only screen and (min-width: $screen-s) {
-            margin-left: percentage($s/$grid);
+      @if ($sm != 0) {
+        @media only screen and (min-width: $screen-sm) {
+            margin-left: percentage($sm/$grid);
         }
       }
 
-      @if ($m != 0) {
-        @media only screen and (min-width: $screen-m) {
-            margin-left: percentage($m/$grid);
+      @if ($md != 0) {
+        @media only screen and (min-width: $screen-md) {
+            margin-left: percentage($md/$grid);
         }
       }
 
-      @if ($l != 0) {
-        @media only screen and (min-width: $screen-l) {
-            margin-left: percentage($l/$grid);
+      @if ($lg != 0) {
+        @media only screen and (min-width: $screen-lg) {
+            margin-left: percentage($lg/$grid);
         }
       }
 
@@ -136,9 +136,3 @@
       }
 
 }
-
-
-
-
-
-

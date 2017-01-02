@@ -16,7 +16,7 @@ table{
 	background-color: $table-bg-color;
 
 	caption{
-
+		font-weight: bold;
 	}
 
 	th, td{
@@ -24,7 +24,7 @@ table{
 		vertical-align: $table-align;
 	    border-top: $table-border-width solid $table-border-color;
    	    border-bottom: $table-border-width solid $table-border-color;
-   	    text-align: left; 
+   	    text-align: left;
 	}
 
 

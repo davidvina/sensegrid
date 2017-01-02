@@ -15,15 +15,20 @@
 */
 
 
+html{
+  font-size: $font-size-default;
+}
+
 body {
   font:{
     family: $font-default;
     weight: normal;
-    size: 14px;
+    size: 1rem;
   }
+  line-height: $line-height-default;
   color: $font-color-default;
   background-color: $bg-color;
-  line-height: 1.5;
+
 }
 
 a{
@@ -37,14 +42,14 @@ a{
   }
 }
 
-p, h1, h2, h3, h4, h4{
+p, h1, h2, h3, h4, h5, h6{
   margin: $text-block-margin;
   padding: 0px;
   border: 0;
   size: 100%;
 }
 
-h1, h2, h3, h4, h4{
+h1, h2, h3, h4, h5, h6{
   font:{
     family: $font-headers;
     weight: bold;
@@ -72,6 +77,29 @@ h5{
   font-size: 1rem;
 }
 
+h6{
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+
+address{
+  margin: $text-block-margin;
+}
+
+blockquote{
+  border-left: $blocquote-decoration-border;
+  padding: $blocquote-padding;
+  margin: $text-block-margin;
+}
+
+cite{
+  
+}
+
+abbr{
+
+}
 
 /*
 ***************************************************************
