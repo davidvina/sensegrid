@@ -12,20 +12,12 @@
 
 
 
-html, body{
-  margin: 0px;
-  padding: 0px
-}
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
 
 blockquote, q {
 	quotes: none;
 }
+
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
@@ -163,14 +155,6 @@ abbr[title] {
 b,
 strong {
   font-weight: inherit;
-}
-
-//
-// Add the correct font weight in Chrome, Edge, and Safari.
-//
-
-b,
-strong {
   font-weight: bolder;
 }
 
@@ -192,22 +176,6 @@ h1 {
   margin: 0.67em 0;
 }
 
-//
-// Add the correct background and color in IE 9-.
-//
-
-mark {
-  background-color: #ff0;
-  color: #000;
-}
-
-//
-// Add the correct font size in all browsers.
-//
-
-small {
-  font-size: 80%;
-}
 
 //
 // Prevent `sub` and `sup` elements from affecting the line height in

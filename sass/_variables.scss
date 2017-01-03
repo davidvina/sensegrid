@@ -6,24 +6,20 @@
 *
 *****************************************************************/
 
+// for default text: Arimo
+// for headers: Baloo Chettan
+
+@import url('https://fonts.googleapis.com/css?family=Arimo|Baloo+Chettan');
+
+// font for default text
 @import url('https://fonts.googleapis.com/css?family=Bitter');
 
-///////////////////////////////////////////////////////////////////////////////////////
-// fonts
-// sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
-// serif:
-// monospace:
-///////////////////////////////////////////////////////////////////////////////////////
 
+// tipografias
 
-$font-default: 'Bitter', Helvetica, Arial, serif;
-$font-headers: $font-default;
-
-$font-size-default: 16px;
-$line-height-default: 1.5;
-
-// Native font stack
 $font-family-sans-serif:
+  'Arimo',
+  // Native font stack
   // Safari for OS X and iOS (San Francisco)
   -apple-system,
   // Chrome for OS X (San Francisco)
@@ -35,13 +31,49 @@ $font-family-sans-serif:
   // Basic web fallback
   "Helvetica Neue", Arial, sans-serif !default;
 
+$font-family-serif:
+  Georgia,
+  "Times New Roman",
+  Times,
+  serif !default;
 
-  // espacio entre bloques
-  $text-block-margin: 0 0 1rem 0;
+$font-family-monospace:
+  Menlo,
+  Monaco,
+  Consolas,
+  "Liberation Mono",
+  "Courier New",
+  monospace !default;
 
-  // blockquote
-  $blocquote-padding: 1rem 2rem;
-  $blocquote-decoration-border: 3px solid #ccc;
+
+///////////////////////////////////////////////////////////////////////////////////////
+// fonts
+// sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+// serif:
+// monospace:
+///////////////////////////////////////////////////////////////////////////////////////
+
+
+$font-default: $font-family-sans-serif;
+
+$font-headers: 'Baloo Chettan', cursive;;
+
+$font-size-default: 16px;
+
+$line-height-default: 1.5;
+
+
+// espacio entre bloques
+$text-block-margin: 0 0 1rem 0;
+
+// blockquote
+$blocquote-padding: 1rem 2rem;
+$blocquote-decoration-border: 3px solid #ccc;
+
+// mark
+$mark-bg: #ff0;
+$mark-color: #000; 
+
 
 ///////////////////////////////////////////////////////////////////////////////////////
 // Media queries breakpoints
@@ -154,3 +186,12 @@ $button-form-bg-hover: $button-bg-hover;
 $border-radius: 6px; // bordes redondeados
 $text-shadow-default: 0 1px 3px rgba(0, 0, 0, 0.25);
 $shadow-default: 1px, 1px, 3px, red;
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+// Code
+///////////////////////////////////////////////////////////////////////////////////////
+
+$code-font-family: $font-family-monospace;
+$code-color: red;
+$code-kbd-bg-color: #ccc;

@@ -16,14 +16,15 @@
 
 
 html{
+  margin: 0px;
+  padding: 0px;
   font-size: $font-size-default;
 }
 
 
-
-
-
 body {
+  margin: 0px;
+  padding: 0px;
   font:{
     family: $font-default;
     weight: normal;
@@ -118,21 +119,15 @@ ins, u{
 
 }
 
-small, .small{
-
+small{
+  font-size: 80%;
 }
 
 mark, .mark{
-
+  background-color: $mark-bg;
+  color: $mark-color;
 }
 
-strong{
-
-}
-
-em{
-
-}
 
 
 /*

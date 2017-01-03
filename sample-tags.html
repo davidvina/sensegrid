@@ -20,55 +20,38 @@
 </head>
 <body id="sample-tags">
 	<header id="main-header">
+
 		<div class="container">
 
 			<div id="main-logo-container">
 				<a href="index.html"><img id="site-logo" src="img/logo.png" alt="DAVINA"></a>
 			</div>
 
-			<nav id="follow-menu">
-				<p class="list-heading">
-					Segueix-nos a
-				</p>
-				<ul>
-					<li><a href="" title="Segueix-nos a Twitter"><i class="icon-twitter"></i></a></li>
-					<li><a href="" title="Segueix-nos a Facebook"><i class="icon-facebook"></i></a></li>
-					<li><a href="" title="Segueix-nos a Pinterest"><i class="icon-pinterest"></i></a></li>
-					<li><a href="" title="Segueix-nos a Instagram"><i class="icon-instagram"></i></a></li>
-				</ul>
-			</nav><!-- #follow-menu -->
 
-			<nav id="featured-menu">
-				<ul>
-					<li><a href="" title="">Ofertes</a></li>
-					<li><a href="comcomprar.html" title="">Com comprar</a></li>
-					<li><a href="" title="">Enviaments</a></li>
-				</ul>
-			</nav><!-- #featured-menu -->
 
-			<div id="search-form">
-				<form method="post" action="?">
-					<input type="text" name="simple-search" id="simple-search" placeholder="Cercar per paraula">
-					<button type="submit"><i class="icon-search"></i></button>
-				</form>
-			</div><!-- #search-form -->
+			<div id="main-navigation">
+
+
+				<nav id="main-navbar">
+					<a class="toggleMenu"><i class="icon-menu"></i></a>
+					<ul class="responsive-menu">
+						<li><a href="categoria.html">Grid</a></li>
+						<li><a href="sample-tags.html">Base HTML/CSS</a></li>
+						<li><a href="categoria.html">Helpers</a></li>
+						<li><a href="categoria.html">Components</a></li>
+					</ul>
+				</nav><!-- #main-navigator -->
+
+			
+			</div><!-- #main-navigation-container -->
+
+
 
 		</div><!-- .container -->
+		
 	</header><!-- #main-header -->
 
-	<div id="main-navigation">
 
-		<nav id="main-navbar">
-			<a class="toggleMenu"><i class="icon-menu"></i></a>
-			<ul class="responsive-menu">
-				<li><a href="categoria.html">Categoria 1</a></li>
-				<li><a href="categoria.html">Categoria 2</a></li>
-				<li><a href="categoria.html">Categoria 3</a></li>
-				<li><a href="categoria.html">Categoria 4</a></li>
-			</ul>
-		</nav><!-- #main-navigator -->
-
-	</div><!-- #main-navigation-container -->
 
 		<header role="banner">
 			<div class="container">
@@ -372,89 +355,7 @@
 						</footer>
 					</article>
 
-					<article id="embedded__audio">
-						<header>
-							<h2>Audio</h2>
-						</header>
-						<div>
-							<audio controls="">audio</audio>
-						</div>
-						<footer>
-							<p><a href="#top">[Top]</a></p>
-						</footer>
-					</article>
 
-					<article id="embedded__video">
-						<header>
-							<h2>Video</h2>
-						</header>
-						<div>
-							<video controls="">video</video>
-						</div>
-						<footer>
-							<p><a href="#top">[Top]</a></p>
-						</footer>
-					</article>
-
-					<article id="embedded__canvas">
-						<header>
-							<h2>Canvas</h2>
-						</header>
-						<div>
-							<canvas>canvas</canvas>
-						</div>
-						<footer>
-							<p><a href="#top">[Top]</a></p>
-						</footer>
-					</article>
-
-					<article id="embedded__meter">
-						<header>
-							<h2>Meter</h2>
-						</header>
-						<div>
-							<meter value="2" min="0" max="10">2 out of 10</meter>
-						</div>
-						<footer>
-							<p><a href="#top">[Top]</a></p>
-						</footer>
-					</article>
-
-					<article id="embedded__progress">
-						<header>
-							<h2>Progress</h2>
-						</header>
-						<div>
-							<progress>progress</progress>
-						</div>
-						<footer>
-							<p><a href="#top">[Top]</a></p>
-						</footer>
-					</article>
-
-					<article id="embedded__svg">
-						<header>
-							<h2>Inline SVG</h2>
-						</header>
-						<div>
-							<svg width="100px" height="100px"><circle cx="100" cy="100" r="100" fill="#1fa3ec"></circle></svg>
-						</div>
-						<footer>
-							<p><a href="#top">[Top]</a></p>
-						</footer>
-					</article>
-
-					<article id="embedded__iframe">
-						<header>
-							<h2>IFrame</h2>
-						</header>
-						<div>
-							<iframe src="index.html" height="300"></iframe>
-						</div>
-						<footer>
-							<p><a href="#top">[Top]</a></p>
-						</footer>
-					</article>
 				</section> <!-- #embedded -->
 
 				<section id="forms">
@@ -642,15 +543,25 @@
 						<li><a href="">FAQ</a></li>
 					</ul>
 				</nav>
+				
+				<div id="search-form">
+					<form method="post" action="?">
+						<input type="text" name="simple-search" id="simple-search" placeholder="Cercar per paraula">
+						<button type="submit"><i class="icon-search"></i></button>
+					</form>
+				</div><!-- #search-form -->
 
-				<nav id="about-us-menu">
-					<h3 class="list-heading">Sobre nosaltres</h3>
+				<nav id="follow-menu">
+					<p class="list-heading">
+						Segueix-nos a
+					</p>
 					<ul>
-						<li><a href="">Blog</a></li>
-						<li><a href="">On estem</a></li>
-						<li><a href="">Contacte</a></li>
+						<li><a href="" title="Segueix-nos a Twitter"><i class="icon-twitter"></i></a></li>
+						<li><a href="" title="Segueix-nos a Facebook"><i class="icon-facebook"></i></a></li>
+						<li><a href="" title="Segueix-nos a Pinterest"><i class="icon-pinterest"></i></a></li>
+						<li><a href="" title="Segueix-nos a Instagram"><i class="icon-instagram"></i></a></li>
 					</ul>
-				</nav>
+				</nav><!-- #follow-menu -->
 
 		</div><!-- .container -->
 

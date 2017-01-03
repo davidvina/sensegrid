@@ -90,11 +90,12 @@
     //@include container();
     text-align: $align;
     //padding: 0px $gap-hor;
-
+    margin: 0px;
 
     li{
         display: block;
         font-size: $font-size-default;
+        margin: 0px;
 
         a{
            display: block;
@@ -117,10 +118,7 @@
 
 
     }
-
-
   }
-
 
   a{
 
