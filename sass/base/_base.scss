@@ -19,6 +19,10 @@ html{
   font-size: $font-size-default;
 }
 
+
+
+
+
 body {
   font:{
     family: $font-default;
@@ -94,12 +98,42 @@ blockquote{
 }
 
 cite{
-  
+
 }
 
 abbr{
 
 }
+
+
+/* inline elements */
+
+
+
+del, s{
+
+}
+
+ins, u{
+
+}
+
+small, .small{
+
+}
+
+mark, .mark{
+
+}
+
+strong{
+
+}
+
+em{
+
+}
+
 
 /*
 ***************************************************************
