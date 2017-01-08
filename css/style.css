@@ -30,8 +30,7 @@
 * 0. Tipografia externa
 *
 *****************************************************************/
-@import url("https://fonts.googleapis.com/css?family=Arimo|Baloo+Chettan");
-@import url("https://fonts.googleapis.com/css?family=Bitter");
+@import url("https://fonts.googleapis.com/css?family=Arimo");
 /****************************************************************
 *
 * 1. Base
@@ -253,7 +252,7 @@ html {
 body {
   margin: 0px;
   padding: 0px;
-  font-family: "Arimo", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Arimo", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.5;
@@ -275,7 +274,7 @@ p, h1, h2, h3, h4, h5, h6 {
   size: 100%; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Baloo Chettan", cursive;
+  font-family: "Arimo", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif;
   font-weight: bold;
   color: #5a0900; }
 
@@ -388,7 +387,6 @@ input[type="tel"],
 input[type="time"],
 input[type="url"],
 input[type="week"],
-input[type="reset"],
 textarea,
 keygen,
 datalist,
@@ -398,6 +396,8 @@ output {
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color: red;
   outline: none;
   padding: 5px 10px;
   margin: 5px 1px 3px 0px;
@@ -410,7 +410,8 @@ output {
   border-radius: 10px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  width: 100%; }
 
 select {
   padding: 4px 10px; }
@@ -442,6 +443,35 @@ output:focus {
   box-shadow: 0 0 5px #51cbee;
   border: 2px solid #51cbee; }
 
+/*
+foco en elemento disabled
+*/
+input[type="text"]:disabled,
+input[type="password"]:disabled,
+input[type="color"]:disabled,
+input[type="date"]:disabled,
+input[type="datetime"]:disabled,
+input[type="datetime-local"]:disabled,
+input[type="email"]:disabled,
+input[type="month"]:disabled,
+input[type="number"]:disabled,
+input[type="search"]:disabled,
+input[type="tel"]:disabled,
+input[type="time"]:disabled,
+input[type="url"]:disabled,
+input[type="week"]:disabled,
+textarea:disabled,
+select:disabled,
+keygen:disabled,
+datalist:disabled,
+output:disabled {
+  color: #937985;
+  background-color: rgba(51, 51, 51, 0);
+  -webkit-box-shadow: 0 0 5px #cccccc inset;
+  -moz-box-shadow: 0 0 5px #cccccc inset;
+  box-shadow: 0 0 5px #cccccc inset;
+  border: 2px solid #cccccc; }
+
 .form-group {
   margin: 10px 0px; }
 
@@ -452,23 +482,56 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"],
 button {
-  border-radius: 6px;
-  -webkit-box-shadow: 1px, 1px, 3px, red;
-  -moz-box-shadow: 1px, 1px, 3px, red;
-  box-shadow: 1px, 1px, 3px, red;
+  text-align: center;
+  display: inline-block;
+  padding: 8px 20px;
   color: #403339;
-  background-color: #68AFC1;
-  padding: 5px 10px;
-  font-size: 0.9rem;
-  border: 1px solid #68AFC1; }
+  background-color: transparent;
+  border: 2px solid #68AFC1;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer; }
   input[type="button"]:hover,
   input[type="submit"]:hover,
   input[type="reset"]:hover,
   button:hover {
-    color: #5a0900;
-    background-color: #FF6B5A;
-    border: 1px solid #FF6B5A;
-    cursor: pointer; }
+    color: #403339;
+    background-color: #68AFC1;
+    border: 2px solid #68AFC1; }
+
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+button::active {
+  -webkit-box-shadow: inset 0 0 3px red;
+  -moz-box-shadow: inset 0 0 3px red;
+  box-shadow: inset 0 0 3px red;
+  background-color: red; }
+
+input[type="button"]:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled,
+button:disabled {
+  cursor: default;
+  color: #937985;
+  background-color: rgba(77, 77, 77, 0);
+  border: 2px solid #d4e8ee; }
+  input[type="button"]:disabled:hover,
+  input[type="submit"]:disabled:hover,
+  input[type="reset"]:disabled:hover,
+  button:disabled:hover {
+    color: #937985;
+    background-color: rgba(77, 77, 77, 0);
+    border: 2px solid #d4e8ee; }
 
 /*
 	Missatges de validació
@@ -481,12 +544,10 @@ label.error {
   margin-left: 25%;
   padding-left: 5px; }
 
-.form-group label.error {
-  width: 65%; }
-
 input.error,
 select.error,
 textarea.error {
+  border-color: rgba(153, 0, 0, 0.6);
   box-shadow: 0 1px 1px rgba(250, 0, 0, 0.075) inset, 0 0 5px rgba(255, 0, 0, 0.6); }
 
 /*
@@ -495,6 +556,7 @@ textarea.error {
 input.valid,
 select.valid,
 textarea.valid {
+  border-color: rgba(0, 153, 0, 0.6);
   box-shadow: 0 1px 1px rgba(250, 0, 0, 0.075) inset, 0 0 5px rgba(0, 255, 0, 0.6); }
 
 /*
@@ -822,81 +884,62 @@ http://fontello.com/
 *
 *
 *****************************************************************/
-/*
-
-.text-muted{}
-.text-primary{}
-.text-success{}
-.text-info{}
-.text-warning{}
-.text-danger{}
-.text-white{}
-
-*/
 .img-resp {
   width: 100%;
   height: auto; }
 
+.small {
+  font-size: 80% !important; }
+
+.big {
+  font-size: 130% !important; }
+
+.block {
+  display: block !important;
+  width: 100%; }
+
+.banner {
+  text-align: center;
+  background-color: #FF6B5A;
+  padding: 50px 0px; }
+
 .button {
+  text-align: center;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 8px 20px;
   color: #403339;
-  background-color: #68AFC1;
-  font-size: 1rem;
+  background-color: transparent;
+  border: 2px solid #68AFC1;
   -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
-  border-radius: 6px; }
+  border-radius: 6px;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  cursor: pointer; }
   .button:hover {
-    color: #5a0900;
-    background-color: #FF6B5A; }
+    color: #403339;
+    background-color: #68AFC1;
+    border: 2px solid #68AFC1; }
 
-.button-sm {
-  display: inline-block;
-  padding: 10px 20px;
-  color: #403339;
-  background-color: #68AFC1;
-  font-size: 1rem;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px; }
-  .button-sm:hover {
-    color: #5a0900;
-    background-color: #FF6B5A; }
+button.big,
+input[type="button"].big,
+input[type="submit"].big,
+input[type="reset"].big,
+.button.big {
+  padding: 10px 35px; }
 
-.button-lg {
-  display: inline-block;
-  padding: 10px 20px;
-  color: #403339;
-  background-color: #68AFC1;
-  font-size: 1rem;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px; }
-  .button-lg:hover {
-    color: #5a0900;
-    background-color: #FF6B5A; }
-
-.button-outline {
-  display: inline-block;
-  padding: 10px 20px;
-  color: #403339;
-  background-color: #68AFC1;
-  font-size: 1rem;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px; }
-  .button-outline:hover {
-    color: #5a0900;
-    background-color: #FF6B5A; }
-
-.code {
-  padding: .2rem .5rem;
-  margin: 0 .2rem;
-  font-size: 90%;
-  white-space: nowrap;
-  background: #F1F1F1;
-  border: 1px solid #E1E1E1;
-  border-radius: 4px; }
+button.small,
+input[type="button"].small,
+input[type="submit"].small,
+input[type="reset"].small,
+.button.small {
+  padding: 5px 10px; }
 
 /*
 ***************************************************************
@@ -1026,219 +1069,5 @@ http://fontello.com/
     margin: 0px;
     padding: 10px 15px;
     text-align: center; }
-
-/*
-***************************************************************
-  4.3 Contenido
-***************************************************************
-*/
-#page-header {
-  background-size: 100%;
-  padding: 60px 0px !important;
-  margin-bottom: 30px; }
-  #page-header .main-title {
-    text-align: center;
-    width: 100%;
-    padding: 10px 15px;
-    color: #fff;
-    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.8); }
-
-/*
-***************************************************************
-  4.4 Pie
-***************************************************************
-*/
-/* menus pie */
-#help-menu, #about-us-menu {
-  text-align: center; }
-  #help-menu .list-heading, #about-us-menu .list-heading {
-    display: block; }
-  #help-menu ul a, #help-menu ul li, #about-us-menu ul a, #about-us-menu ul li {
-    display: block; }
-  #help-menu ul li, #about-us-menu ul li {
-    list-style: none; }
-  #help-menu h3, #about-us-menu h3 {
-    font-size: 1rem;
-    font-weight: normal;
-    color: black;
-    border-bottom: 1px solid black; }
-  #help-menu a, #about-us-menu a {
-    color: #F5F4F4; }
-    #help-menu a:hover, #about-us-menu a:hover {
-      color: black; }
-
-/* copyright */
-#copyright {
-  font-size: 90%;
-  text-align: center; }
-
-/****************************************************************
-*
-* 5. Estilos por pagina
-*
-*
-*****************************************************************/
-/*
-***************************************************************
-  5.1. Pagina inicio - index.html
-***************************************************************
-*/
-body#home #page-header {
-  background-image: url("../img/xmas.jpg"); }
-
-.featured-category {
-  text-align: center; }
-
-.category-image {
-  width: 100%;
-  height: auto;
-  margin-bottom: 15px; }
-
-.category-link {
-  margin: auto;
-  display: inline-block;
-  padding: 10px 20px;
-  color: #403339;
-  background-color: #68AFC1;
-  font-size: 1rem;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px; }
-  .category-link:hover {
-    color: #5a0900;
-    background-color: #FF6B5A; }
-
-/*
-***************************************************************
-  5.2. Com comprar - comcomprar.html
-***************************************************************
-*/
-body#comcomprar #page-header {
-  background-image: url("../img/flower.jpg"); }
-
-/*
-***************************************************************
-  5.3. Llista de productes o página categoria - categoria.html
-***************************************************************
-*/
-body#categoria1 #page-header {
-  background-image: url("../img/green_background.jpg"); }
-
-#product-navbar {
-  text-align: left; }
-  #product-navbar .list-heading {
-    display: block; }
-  #product-navbar ul a, #product-navbar ul li {
-    display: block; }
-  #product-navbar ul li {
-    list-style: none; }
-  #product-navbar a {
-    background-color: #FF6B5A;
-    border-bottom: 1px solid white;
-    padding: 10px 15px;
-    color: #F5F4F4;
-    background-color: #FF6B5A;
-    text-align: center; }
-    #product-navbar a:hover {
-      color: #5a0900;
-      background-color: #68AFC1; }
-    #product-navbar a.active {
-      color: red;
-      background-color: #ffc6c0;
-      cursor: default; }
-
-.product-thumb {
-  text-align: center; }
-  .product-thumb .product-title {
-    margin: 0px; }
-  .product-thumb img {
-    width: 100%;
-    height: auto; }
-  .product-thumb span.price {
-    display: block;
-    margin: -5px 0px 10px; }
-    .product-thumb span.price abbr {
-      text-decoration: none; }
-    .product-thumb span.price .number-price {
-      font-size: 1.6rem; }
-  .product-thumb a.button {
-    display: inline-block;
-    padding: 3px 8px;
-    color: #403339;
-    background-color: #68AFC1;
-    font-size: 0.8rem;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    border-radius: 6px; }
-    .product-thumb a.button:hover {
-      color: #5a0900;
-      background-color: #FF6B5A; }
-
-#advance-search label {
-  display: block;
-  clear: both; }
-#advance-search input[type="range"] {
-  margin: 0px;
-  float: left;
-  width: 70%;
-  margin-top: 3px; }
-#advance-search input[type="text"] {
-  margin-left: 5%;
-  width: 25%;
-  padding: 5px 2px 5px 5px;
-  height: 25px; }
-#advance-search input[type="submit"] {
-  width: 100%;
-  margin: 10px 0px 5px; }
-#advance-search .send-group {
-  text-align: center; }
-
-/*
-***************************************************************
-  5.4. Pagina producte - producte.html
-***************************************************************
-*/
-.category-title,
-.product-title {
-  background-color: #b5a3ab;
-  padding-top: 5px;
-  margin: 0px; }
-
-#product-image img {
-  width: 100%;
-  height: auto; }
-
-form#add2cart select, form#add2cart input[type="submit"] {
-  width: 100%; }
-form#add2cart fieldset {
-  border-top: none;
-  margin-bottom: 0px;
-  padding-top: 10px;
-  padding-bottom: 20px;
-  text-align: center; }
-  form#add2cart fieldset select option {
-    text-align: center; }
-
-.price, .product-state, .product-conditions {
-  padding: 5px; }
-
-.price {
-  background-color: #e9e7e7;
-  margin-bottom: 0px;
-  text-align: center !important; }
-  .price .number-price {
-    font-size: 2rem; }
-
-.product-state {
-  background-color: #866c78;
-  color: #F5F4F4;
-  text-align: center !important; }
-
-.product-conditions {
-  background-color: #866c78;
-  color: #F5F4F4;
-  font-size: 0.7rem;
-  font-style: italic;
-  text-align: left !important; }
 
 /*# sourceMappingURL=style.css.map */

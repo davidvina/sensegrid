@@ -1,5 +1,7 @@
 @charset "UTF-8"; //necessari per poder utilitzar accentes i caràcters especials
 
+$form-font-family: $font-family-monospace;
+$form-font-color: red;
 $form-focus: $button-bg;
 $form-bg: #fff;
 $form-error-color: rgba(255, 0, 0, 0.6);
@@ -8,6 +10,7 @@ $form-fieldset-border-color: #ccc;
 $form-fieldset-bg-color: transparent;
 $form-input-border-color: lighten($header-bg-color,40%);
 $form-placeholder-color: lighten($header-bg-color,40%);
+
 
 
 //placeholder
@@ -49,12 +52,13 @@ input[type="tel"],
 input[type="time"],
 input[type="url"],
 input[type="week"],
-input[type="reset"],
 textarea,
 keygen,
 datalist,
 output{
 	@include transition(all 0.30s ease-in-out);
+	font-family: $form-font-family;
+	color: $form-font-color;
   outline: none;
   padding: 5px 10px;
   margin: 5px 1px 3px 0px;
@@ -62,6 +66,7 @@ output{
 	@include box-shadow(inset 0 0 3px #ccc);
 	@include border-radius(10px);
 	@include box-sizing();
+	width: 100%;
 }
 
 select{
@@ -97,6 +102,38 @@ output:focus{
   border: 2px solid rgba(81, 203, 238, 1);
 }
 
+
+/*
+foco en elemento disabled
+*/
+
+input[type="text"]:disabled,
+input[type="password"]:disabled,
+input[type="color"]:disabled,
+input[type="date"]:disabled,
+input[type="datetime"]:disabled,
+input[type="datetime-local"]:disabled,
+input[type="email"]:disabled,
+input[type="month"]:disabled,
+input[type="number"]:disabled,
+input[type="search"]:disabled,
+input[type="tel"]:disabled,
+input[type="time"]:disabled,
+input[type="url"]:disabled,
+input[type="week"]:disabled,
+textarea:disabled,
+select:disabled,
+keygen:disabled,
+datalist:disabled,
+output:disabled{
+	color: lighten( $button-color, 30% );
+	background-color: lighten( $button-bg, 20% );
+	@include box-shadow(0 0 5px lighten($form-input-border-color, 20%) inset);
+	border: 2px solid lighten( $form-input-border-color, 20% );
+}
+
+
+
 .form-group{
 	margin: 10px 0px;
 }
@@ -109,22 +146,36 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"],
 button{
-	border-radius: $border-radius;
-	@include box-shadow($shadow-default);
-	color: $button-form-color;
-	background-color: $button-form-bg;
-	padding: $button-form-padding;
-	font-size: 0.9rem;
-	border: 1px solid $button-form-bg;
+	@include button();
+}
+
+input[type="button"]:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+button::active{
+	@include box-shadow(inset 0 0 3px red);
+	background-color: red;
+}
+
+
+input[type="button"]:disabled,
+input[type="submit"]:disabled,
+input[type="reset"]:disabled,
+button:disabled{
+  cursor: default;
+	color: lighten( $button-color, 30% );
+	background-color: lighten( $button-bg, 30% );
+	border: 2px solid lighten( $button-border-color, 30% );
 
 	&:hover{
-		color: $button-form-color-hover;
-		background-color: $button-form-bg-hover;
-		border: 1px solid $button-form-bg-hover;
-		cursor: pointer;
+		color: lighten( $button-color, 30% );
+		background-color: lighten( $button-bg, 30% );
+		border: 2px solid lighten( $button-border-color, 30% );
 	}
-
 }
+
+
+
 
 
 
@@ -142,15 +193,14 @@ label.error{
 
 }
 
-.form-group label.error{
-	width: 65%;
-}
 
 input.error,
 select.error,
 textarea.error{
+	border-color: darken($form-error-color, 20%);
 	box-shadow: 0 1px 1px rgba(250, 0, 0, 0.075) inset, 0 0 5px $form-error-color;
 }
+
 
 /*
 	Camps amb dades correctes
@@ -159,5 +209,6 @@ textarea.error{
 input.valid,
 select.valid,
 textarea.valid{
+	border-color: darken($form-success-color, 20%);
 	box-shadow: 0 1px 1px rgba(250, 0, 0, 0.075) inset, 0 0 5px $form-success-color;
 }

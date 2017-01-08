@@ -1,5 +1,9 @@
 @charset "UTF-8";
 
+
+
+
+
 /****************************************************************
 *
 * 0. Tipografia externa
@@ -9,41 +13,14 @@
 // for default text: Arimo
 // for headers: Baloo Chettan
 
-@import url('https://fonts.googleapis.com/css?family=Arimo|Baloo+Chettan');
-
-// font for default text
-@import url('https://fonts.googleapis.com/css?family=Bitter');
+@import url('https://fonts.googleapis.com/css?family=Arimo');
 
 
 // tipografias
 
-$font-family-sans-serif:
-  'Arimo',
-  // Native font stack
-  // Safari for OS X and iOS (San Francisco)
-  -apple-system,
-  // Chrome for OS X (San Francisco)
-  BlinkMacSystemFont,
-  // Windows
-  "Segoe UI",
-  // Android
-  "Roboto",
-  // Basic web fallback
-  "Helvetica Neue", Arial, sans-serif !default;
-
-$font-family-serif:
-  Georgia,
-  "Times New Roman",
-  Times,
-  serif !default;
-
-$font-family-monospace:
-  Menlo,
-  Monaco,
-  Consolas,
-  "Liberation Mono",
-  "Courier New",
-  monospace !default;
+$font-family-sans-serif: 'Arimo', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif !default;
+$font-family-serif: Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -53,15 +30,10 @@ $font-family-monospace:
 // monospace:
 ///////////////////////////////////////////////////////////////////////////////////////
 
-
 $font-default: $font-family-sans-serif;
-
-$font-headers: 'Baloo Chettan', cursive;;
-
+$font-headers: $font-default;
 $font-size-default: 16px;
-
 $line-height-default: 1.5;
-
 
 // espacio entre bloques
 $text-block-margin: 0 0 1rem 0;
@@ -110,11 +82,12 @@ $show-grid: false;
 $color-grid: cyan;
 
 
-
-
 ///////////////////////////////////////////////////////////////////////////////////////
-// Colores
+// colors
 ///////////////////////////////////////////////////////////////////////////////////////
+$primary: #FF6B5A;
+$secondary: #68AFC1;
+
 
 // colors based on
 // http://huertatipografica.com/es/fonts/alegreya-sans-ht
@@ -156,11 +129,15 @@ $navbar-link-active-color-bg: green;
 ///////////////////////////////////////////////////////////////////////////////////////
 
 // buttons
-$button-padding: 10px 20px;
+$button-padding: 8px 20px;
+$button-padding-small: 5px 10px;
+$button-padding-big: 10px 35px;
+$button-border-color: #68AFC1;
 $button-color: $font-color-default;
-$button-bg: #68AFC1;
-$button-color-hover: $font-color-headers;
-$button-bg-hover: #FF6B5A;
+$button-bg: transparent;
+$button-border-color-hover: #68AFC1;
+$button-color-hover: $font-color-default;
+$button-bg-hover: #68AFC1;
 
 
 ///////////////////////////////////////////////////////////////////////////////////////

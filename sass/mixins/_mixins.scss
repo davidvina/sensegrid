@@ -213,20 +213,21 @@ box-sizing: $value;
 
 
 // buttons
-@mixin button(
-  $padding: $button-padding,
-  $font-size: 1rem
-  ){
+@mixin button(){
+  //font-size: $font-size;
+  text-align: center;
   display: inline-block;
-  padding: $padding;
+  padding: $button-padding;
   color: $button-color;
   background-color: $button-bg;
-  font-size: $font-size;
-
+  border: 2px solid $button-border-color;
   @include border-radius($border-radius);
-
+  @include transition();
+  @include box-sizing();
+  cursor: pointer;
   &:hover{
     color: $button-color-hover;
     background-color: $button-bg-hover;
+    border: 2px solid $button-border-color-hover;
   }
 }
