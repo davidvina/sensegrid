@@ -79,46 +79,55 @@ box-sizing: $value;
 // navigation menus
 
 // menu de navegacion horizontal
-@mixin nav-hor ($align: left){
+@mixin nav-hor ($align: left, $reset: false){
 
-  text-align: $align;
+	text-align: $align;
 
-  .list-heading, ul, li{
-    display: inline-block;
-  }
+	.list-heading, ul, li{
+		display: inline-block;
+	}
 
-  li{
-    list-style: none;
-  }
+	ul, li{
+		@if $reset{
+			margin: 0px;
+		}
+	}
 
-  a {
-    display: inline-block;
-  }
+	li{
+		list-style: none;
+	}
+
+	a {
+		display: inline-block;
+	}
 }
 
 
 // menu de navegacion horizontal
-@mixin nav-ver ($align: left){
+@mixin nav-ver ($align: left, $reset: false){
 
   text-align: $align;
 
-  .list-heading{
-    display: block;
-  }
+	.list-heading{
+		display: block;
+	}
 
-  ul{
-    a, li{
-      display: block;
-    }
+	ul{
+		@if $reset{
+			margin: 0px;
+		}
 
-    li{
-      list-style: none;
-    }
+	    a, li{
+	      display: block;
+	    }
 
-  }
-
-
-
+	    li{
+			@if $reset{
+				margin: 0px;
+			}
+			list-style: none;
+		}
+	}
 }
 
 //

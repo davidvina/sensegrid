@@ -72,7 +72,11 @@
       $padding: true
     ) {
 
-    $width : percentage($grid/$xs);
+    $width : percentage($xs/$grid);
+	@if($xs != $grid){
+		float: left;
+	}
+
 
 	  // configuracio per defecte per dispositius mòvils
     width: $width;

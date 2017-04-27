@@ -1,0 +1,16 @@
+@charset "UTF-8"; //necessario para poder utilitzar acentos
+
+/****************************************************************
+ INDEX
+* 0. Tipografia externa
+* 1. Base
+* 2. Layout
+...
+*****************************************************************/
+
+
+//@import 'variables';  // importar siempre variables primero
+@import 'grid/grid';       // regilla
+@import 'mixins/mixins';     // patrones reutilizables por las reglas
+@import 'base/base'; // estilos básicos
+@import 'classes/classes';
