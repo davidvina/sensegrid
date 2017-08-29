@@ -72,10 +72,20 @@
       $padding: true
     ) {
 
-    $width : percentage($grid/$xs);
+    $width : percentage($xs/$grid);
 
-	  // configuracio per defecte per dispositius mòvils
-    width: $width;
+    position: relative;
+
+  	@if($xs != $grid){
+      width: percentage($xs/$grid);
+  		float: left;
+  	} else{
+      // configuracio per defecte per dispositius mòvils
+      width: $width;
+    }
+
+
+
 
     @if ($padding == true){
       padding: $gap-ver $gap-hor;
@@ -161,4 +171,87 @@
         }
       }
 
+}
+
+
+// @mixin offset controla el margen izquierdo de las columnas
+@mixin pull (
+      $grid: $grid-default,
+      $xl:  0,
+      $lg:   0,
+      $md:   0,
+      $sm:   0,
+      $xs:  0
+      ){
+
+      // només es crea si s'ha passat parametres al mixin
+
+      @if ($xs != 0) {
+        right: percentage($xs/$grid);
+      }
+
+      @if ($sm != 0) {
+        @media only screen and (min-width: $screen-sm) {
+            margin-left: percentage($sm/$grid);
+        }
+      }
+
+      @if ($md != 0) {
+        @media only screen and (min-width: $screen-md) {
+            right: percentage($md/$grid);
+        }
+      }
+
+      @if ($lg != 0) {
+        @media only screen and (min-width: $screen-lg) {
+            right: percentage($lg/$grid);
+        }
+      }
+
+      @if ($xl != 0) {
+        @media only screen and (min-width: $screen-xl) {
+            right: percentage($xl/$grid);
+        }
+      }
+}
+
+// @mixin offset controla el margen izquierdo de las columnas
+@mixin push (
+      $grid: $grid-default,
+      $xl:  0,
+      $lg:   0,
+      $md:   0,
+      $sm:   0,
+      $xs:  0
+      ){
+
+      // només es crea si s'ha passat parametres al mixin
+
+      @if ($xs != 0) {
+        left: percentage($xs/$grid);
+      }
+
+      @if ($sm != 0) {
+        @media only screen and (min-width: $screen-sm) {
+            left: percentage($sm/$grid);
+        }
+      }
+
+      @if ($md != 0) {
+        @media only screen and (min-width: $screen-md) {
+            left: percentage($md/$grid);
+        }
+      }
+
+      @if ($lg != 0) {
+        @media only screen and (min-width: $screen-lg) {
+            left: percentage($lg/$grid);
+        }
+      }
+
+      @if ($xl != 0) {
+        @media only screen and (min-width: $screen-xl) {
+            left: percentage($xl/$grid);
+        }
+      }
 }

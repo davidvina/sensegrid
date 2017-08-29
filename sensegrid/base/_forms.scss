@@ -1,19 +1,5 @@
 @charset "UTF-8"; //necessari per poder utilitzar accentes i caràcters especials
 
-$form-font-family: $font-family-monospace;
-$form-font-color: red;
-$form-focus: $button-bg;
-$form-bg: #fff;
-$form-error-color: rgba(255, 0, 0, 0.6);
-$form-success-color: rgba(0, 255, 0, 0.6);
-$form-fieldset-border-color: #ccc;
-$form-fieldset-bg-color: transparent;
-$form-input-border-color: lighten($header-bg-color,40%);
-$form-placeholder-color: lighten($header-bg-color,40%);
-
-
-
-//placeholder
 
 @include placeholder {
 	color: $form-placeholder-color;
@@ -57,14 +43,16 @@ keygen,
 datalist,
 output{
 	@include transition(all 0.30s ease-in-out);
+	background-color: $form-input-bg-color;
 	font-family: $form-font-family;
+	font-size: $form-font-size;
 	color: $form-font-color;
-  outline: none;
-  padding: 5px 10px;
-  margin: 5px 1px 3px 0px;
-  border: 2px solid $form-input-border-color;
-	@include box-shadow(inset 0 0 3px #ccc);
-	@include border-radius(10px);
+	outline: none;
+	padding: 5px 10px;
+	margin: 5px 1px 3px 0px;
+	border: $form-input-border-size solid $form-input-border-color;
+	@include box-shadow($form-input-shadow);
+	@include border-radius($form-input-border-radius);
 	@include box-sizing();
 	width: 100%;
 }
@@ -98,8 +86,8 @@ select:focus,
 keygen:focus,
 datalist:focus,
 output:focus{
-	@include box-shadow(0 0 5px rgba(81, 203, 238, 1));
-  border: 2px solid rgba(81, 203, 238, 1);
+	@include box-shadow($form-input-focus-shadow);
+	border: $form-input-border-size solid $form-input-focus-border-color;
 }
 
 
@@ -129,7 +117,7 @@ output:disabled{
 	color: lighten( $button-color, 30% );
 	background-color: lighten( $button-bg, 20% );
 	@include box-shadow(0 0 5px lighten($form-input-border-color, 20%) inset);
-	border: 2px solid lighten( $form-input-border-color, 20% );
+	border: $form-input-border-size solid lighten( $form-input-border-color, 20% );
 }
 
 
@@ -165,12 +153,12 @@ button:disabled{
   cursor: default;
 	color: lighten( $button-color, 30% );
 	background-color: lighten( $button-bg, 30% );
-	border: 2px solid lighten( $button-border-color, 30% );
+	border: $form-input-border-size solid lighten( $button-border-color, 30% );
 
 	&:hover{
 		color: lighten( $button-color, 30% );
 		background-color: lighten( $button-bg, 30% );
-		border: 2px solid lighten( $button-border-color, 30% );
+		border: $form-input-border-size solid lighten( $button-border-color, 30% );
 	}
 }
 
