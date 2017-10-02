@@ -1,20 +1,44 @@
 # SENSE GRID
 
-One Paragraph of project description goes here
+Framework CSS made with SASS
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+To install SENSEGRID, put folder on your proyect an import _sensegrid.scss and _variables.scss on your main scss file.
+I recomend to overwrite _variables.scss. 
 
-### Prerequisites
+## Installing
 
-What things you need to install the software and how to install them
+### Manual
+
+To install SENSEGRID, put folder on your proyect an import _sensegrid.scss and _variables.scss on your main scss file.
+I recomend to overwrite _variables.scss.
+
+ ### Bower
 
 ```
 Give examples
 ```
 
-### Installing
+## Getting Started
+
+### Mixins
+
+
+```
+@include container();
+```
+
+```
+@include col(numColums, padding, grid);
+```
+
+
+
+
+
+
+
 
 A step by step series of examples that tell you have to get a development env running
 
