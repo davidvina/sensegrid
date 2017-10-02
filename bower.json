@@ -1,0 +1,24 @@
+{
+  "name": "sensegrid",
+  "version": "0.1.0",
+  "homepage": "https://github.com/davidvina/sensegrid",
+  "authors": [
+    "David Vinagre <dvinagre@perception.es>"
+  ],
+  "description": "Css framework grid made with sass",
+  "main": "_sensegrid.scss",
+  "keywords": [
+    "sass",
+    "scss",
+    "grid",
+    "semantic"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
