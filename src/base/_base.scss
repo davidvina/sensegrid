@@ -16,15 +16,15 @@
 
 
 html{
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font-size: $font-size-default;
 }
 
 
 body {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   font:{
     family: $font-default;
     weight: normal;
@@ -49,9 +49,9 @@ a{
 
 p, h1, h2, h3, h4, h5, h6{
   margin: $text-block-margin;
-  padding: 0px;
+  padding: 0;
   border: 0;
-  size: 100%;
+  font-size: 100%;
 }
 
 h1, h2, h3, h4, h5, h6{

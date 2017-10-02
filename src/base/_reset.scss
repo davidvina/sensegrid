@@ -5,8 +5,6 @@
 *,
 *:before,
 *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -20,7 +18,7 @@ blockquote, q {
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
+	//content: '';
 	content: none;
 }
 
@@ -154,7 +152,6 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: inherit;
   font-weight: bolder;
 }
 
@@ -238,7 +235,7 @@ samp {
 //
 
 figure {
-  margin:0px;
+  margin:0;
 }
 
 //

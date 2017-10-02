@@ -58,9 +58,12 @@ $font-family-serif: Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 
 $font-default: $font-family-sans-serif;
-$font-headers: $font-default;
 $font-size-default: 16px;
 $line-height-default: 1.5;
+
+// headers
+$font-headers-weight: bold;
+$font-headers: $font-default;
 
 // espacio entre bloques
 $text-block-margin: 0 0 1rem 0;
@@ -72,6 +75,8 @@ $blocquote-decoration-border: 3px solid #ccc;
 // mark
 $mark-bg: #ff0;
 $mark-color: #000;
+
+
 
 
 //////////////////////////////////////////////////////////////
@@ -109,6 +114,21 @@ $show-grid: false;
 $color-grid: cyan;
 
 //////////////////////////////////////////////////////////////
+// Animation
+//////////////////////////////////////////////////////////////
+
+$transition: all 0.3s ease 0s;
+
+//////////////////////////////////////////////////////////////
+// Graficos
+//////////////////////////////////////////////////////////////
+
+$border-radius: 6px; // bordes redondeados
+$text-shadow-default: 0 1px 3px rgba(0, 0, 0, 0.25);
+$shadow-default: 1px, 1px, 3px, red;
+
+
+//////////////////////////////////////////////////////////////
 // Formularios
 //////////////////////////////////////////////////////////////
 
@@ -130,20 +150,33 @@ $button-form-bg: $button-bg;
 $button-form-color-hover: $font-color-headers;
 $button-form-bg-hover: $button-bg-hover;
 
+// colors
 
-//////////////////////////////////////////////////////////////
-// Animation
-//////////////////////////////////////////////////////////////
 
-$transition: all 0.3s ease 0s;
 
-//////////////////////////////////////////////////////////////
-// Graficos
-//////////////////////////////////////////////////////////////
+$form-font-family: $font-default;
+$form-font-size: $font-size-default;
+$form-font-color: $font-color-default;
 
-$border-radius: 6px; // bordes redondeados
-$text-shadow-default: 0 1px 3px rgba(0, 0, 0, 0.25);
-$shadow-default: 1px, 1px, 3px, red;
+$form-input-bg-color: #fff;
+$form-input-border-size: 1px;
+$form-input-border-radius: $border-radius;
+$form-input-border-color: #ccc;
+$form-input-shadow: $shadow-default;
+$form-input-focus-shadow: #ccc;
+$form-input-focus-border-color: #ccc;
+
+$form-placeholder-color: #ccc;
+
+$form-fieldset-bg-color:#fff;
+$form-fieldset-border-color: #ccc;
+
+
+$form-error-color: red;
+$form-success-color: green;
+
+
+
 
 
 //////////////////////////////////////////////////////////////

@@ -79,7 +79,7 @@
   	@if($xs != $grid){
       width: percentage($xs/$grid);
   		float: left;
-  	} else{
+  	} @else {
       // configuracio per defecte per dispositius mòvils
       width: $width;
     }

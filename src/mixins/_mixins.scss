@@ -7,17 +7,12 @@
 }
 
 @mixin font-size($size) {
-  font-size: $size;
   font-size: calculateRem($size);
 }
 
 
 // transitions
 @mixin transition($args: $transition) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
   transition: $args;
 }
 
@@ -91,7 +86,7 @@ box-sizing: $value;
 
 	ul, li{
 		@if $reset{
-			margin: 0px;
+			margin: 0;
 		}
 	}
 
@@ -116,7 +111,7 @@ box-sizing: $value;
 
 	ul{
 		@if $reset{
-			margin: 0px;
+			margin: 0;
 		}
 
 	    a, li{
@@ -125,7 +120,7 @@ box-sizing: $value;
 
 	    li{
 			@if $reset{
-				margin: 0px;
+				margin: 0;
 			}
 			list-style: none;
 		}
@@ -136,7 +131,6 @@ box-sizing: $value;
 @mixin nav-bar-ver ($align: left){
 
   a{
-    background-color: $navbar-bg;
     border-bottom: 1px solid lighten($navbar-bg, 80%);
     padding: $gap-ver $gap-hor;
     color: $navbar-link-color;
@@ -167,16 +161,16 @@ box-sizing: $value;
 
     display: block;
     /* necessari per eliminar espai entre anidats inline-blocks */
-    font-size: 0px;
+    font-size: 0;
     //@include container();
     text-align: $align;
     //padding: 0px $gap-hor;
-    margin: 0px;
+    margin: 0;
 
     li{
         display: block;
         font-size: $font-size-default;
-        margin: 0px;
+        margin: 0;
 
         a{
            display: block;
